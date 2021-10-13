@@ -35,6 +35,10 @@ snakemake \
     --configfile="../input_files/config.yaml" \
     --report="snakemake_report.html"
 
+cat results/multiqc_summary/multiqc_data/multiqc_cutadapt.txt
+cat results/multiqc_summary/multiqc_data/multiqc_cutadapt_1.txt
+
+
 # Check md5 sum of some output files
 find results/ -type f -name \*\.gz -exec gunzip '{}' \;
 find results/ -type f -name \*\.zip -exec sh -c 'unzip -o {} -d $(dirname {})' \;
